@@ -1,0 +1,187 @@
+/*
+Theme Name: wp-theme-custom
+Theme URI: localhost
+Description: Tema pessoal para afins de aprendizagem.
+Author: Pedroemanuelavelar
+Author URI: https://github.com/Pedroemanuelavelar
+Version: 1.0
+*/
+
+/*-------------
+ Cores Globais  
+---------------*/
+
+:root {
+    
+    --color-0: #000;
+    --color-1: #FFF;
+    --color-2: #ececec;
+    --color-3:  #ebebeb;
+    --color-4: #fcae61;
+    --color-5: rgba(75, 74, 72, 0.39);
+    --color-6: rgba(75, 74, 72, .14);
+    /*--color-7-badge-check: #feaa25;*/
+    --color-8-titles: #242f51;
+    --color-10-badge-check-bg: #e2eaed;
+    --color-11-paragraphs: #616368;
+    --color-12: #f55767;
+    --color-13: #2563ff;
+    --color-14: #40975f;
+    --color-15-stars: #ffcc00;
+    --color-16-slider-active: #eff3f8;
+    --color-17-faq-bg: #f5f7fa;
+    --color-18-social-icons-and-copyrigth: #273043;
+    --color-19-footer-bg: #09142e;
+    --color-20: #fdfdfe;
+    --color-p: #2500f9;
+    --color-p-hover: rgba(37,0,249,0.8);
+}
+
+/*-------------
+ Configurações  
+---------------*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    line-height: 23px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-11-paragraphs);
+}
+
+h1,h2 {
+    color: var(--color-8-titles);
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*------------
+ Cabeçalho  
+------------*/
+.burger {
+    position: absolute;
+    z-index: 1000;
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url("https://ljc-dev.github.io/testing0/ham.svg");
+    background-size: 100%;
+    outline: none;
+    display: none;
+}
+
+.showClose {
+    background-image: url("https://ljc-dev.github.io/testing0/ham-close.svg");
+}
+
+.showNav {
+    transform: translateY(0);
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    transition: all .4s;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+}
+
+.menu-header>ul {
+    list-style: none;
+    justify-content: space-around;
+    display: flex;
+}
+
+.menu-header ul li {
+    display: inline;
+}
+
+.menu-header ul li a {
+    color: var(--color-8-titles);
+    transition: all .4s;
+    margin-right: 1.5rem;
+}
+
+.menu-header ul li a:hover {
+    color: var(--color-4);
+}
+
+.logo>h4>a{
+    color: var(--color-8-titles);
+    font-size: 27px;
+    font-weight: bold;
+    opacity: 1.0;
+    transition: all .4s;
+}
+
+.logo>h4>a:hover {
+    opacity: 0.6;
+}
+
+.logo>h4>a>span.app {
+    color: var(--color-4);
+}
+
+/*----------------------
+ Responsividade burger
+-----------------------*/
+@media screen and (max-width:768px) {
+
+    .menu-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        overflow: hidden;
+        transition: transform 0.2s ease;
+    }
+
+    .menu-header>ul {
+        position: absolute;
+        top: 64px;
+        right: 0;
+        left: 20px;
+        background-color: var(--color-1);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-header li {
+        border-bottom: 1px solid rgba(0,0,0,0.035);
+        padding: 16px 0px;
+        text-align: center;
+    }
+
+
+    .burger {
+        display: block;
+    }
+
+    header {
+        -moz-box-shadow:0 5px 5px rgba(182, 182, 182, 0.75);
+        -webkit-box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
+        box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
+    }
+}
