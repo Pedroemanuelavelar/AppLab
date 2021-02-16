@@ -1,0 +1,30 @@
+/*-------------
+ Cores Globais  
+---------------*/
+
+:root {
+    
+    --color-0: #000;
+    --color-1: #FFF;
+    --color-2: #ececec;
+    --color-3:  #ebebeb;
+    --color-4: #fcae61;
+    --color-5: rgba(75, 74, 72, 0.39);
+    --color-6: rgba(75, 74, 72, .14);
+    /*--color-7-badge-check: #feaa25;*/
+    --color-8-titles: #242f51;
+    --color-10-badge-check-bg: #e2eaed;
+    --color-11-paragraphs: #616368;
+    --color-12: #f55767;
+    --color-13: #2563ff;
+    --color-14: #40975f;
+    --color-15-stars: #ffcc00;
+    --color-16-slider-active: #eff3f8;
+    --color-17-faq-bg: #f5f7fa;
+    --color-18-social-icons-and-copyrigth: #273043;
+    --color-19-footer-bg: #09142e;
+    --color-20: #fdfdfe;
+    --color-21-princigs-items: #999ca5;
+    --color-p: #2500f9;
+    --color-p-hover: rgba(37,0,249,0.8);
+}
