@@ -1,27 +1,53 @@
-//function removeClassActive(){
-    //"use strict";
-    //if($('#tab-title').length){
-        //var pricingTabTitle = $('#tab-title').click(function(){
-            //$("div.price-box-premium-2").show()
-       //});
-    //}
-//}
+// toggle
+const toggle = document.querySelector('.togglerr');
+const priceAnnually = document.querySelectorAll('.price-annually');
+const priceMonth = document.querySelectorAll('.price-month');
 
-(function($){
-    "use strict";
-    if($('#tab-title').length) {
-        var priceTabTitle = $('#tab-title').find('a');
-        var pricebox = $('.price-box-premium-2').find('content-price-annually');
-        pricingTabTitle.each(function(){
-            var Self = $(this);
-            var tabelID = Self.attr('href');
-            Self.on('click', function() {
-                pricingTabTitle.removeClass('active');
-                Self.addClass('active');
-                pricebox.removeClass('active');
-                $(tabelID).addClass('active');
-                return false;
-            })
-        })
+// Function toggle changed prince table
+toggle.addEventListener('change', () => {
+    if (toggle.checked) {
+        priceMonth.forEach(price => price.classList.add('hidden'));
+        priceAnnually.forEach(price => price.classList.remove('hidden'));
+    } else {
+        priceMonth.forEach(price => price.classList.remove('hidden'));
+        priceAnnually.forEach(price => price.classList.add('hidden'));
     }
-})(jQuery);
+});
+
+
+// Add active class to the current labels (highlight it)
+var header = document.getElementById("active");
+var labels = header.getElementsByClassName("single");
+var current = document.getElementsByClassName("active");
+for (var i = 0; i < labels.length; i++) {
+    labels[i].addEventListener("click", function() {
+    if (current.length > 0) { 
+      current[0].className = current[0].className.replace(" active", "");
+    }
+    this.className += " active";
+  });
+}
+
+// FAQ function
+var accordion = document.getElementsByClassName("accordion");
+var contador;
+
+for (contador = 0; contador < accordion.length; contador++) {
+  accordion[contador].addEventListener("click", function() {
+    this.classList.toggle("active-acc");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+    /* if(panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.ScrollHeigth + "px";
+    } */
+  });
+}
+
+
+
