@@ -1,0 +1,109 @@
+/*--------------
+    Section FAQ
+----------------*/
+.row-9 {
+    display: flex;
+    justify-content: center;
+}
+
+.row-9 .content-faq {
+    text-align: center;
+    margin-top: 213px;
+}
+
+.row-9 .content-faq>h2 {
+    font-size: 40px;
+}
+
+.row-9 .content-faq>p {
+    width: 660px;
+    margin-bottom: 70px;
+}
+
+.row-10 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 196px;  
+}
+
+.row-10 .accordion {
+    background-color: var(--color-17-faq-bg);
+    color: var(--color-8-titles);
+    cursor: pointer;
+    padding: 30px 0 23px 45px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    margin: 6px 0;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif; 
+}
+
+.row-10 .active-acc, .row-10 .accordion:hover {
+    background-color: var(--color-17-faq-bg);
+}
+
+.accordion:after {
+    content: '\002B';
+    color: var(--color-8-titles);
+    font-weight: 400;
+    float: right;
+    margin-left: 5px;
+    transform: translateX(-39px);
+    font-size: 27px;
+}
+
+.row-10 .panel {
+    padding: 0px 38px 220px 45px;
+    background-color: var(--color-17-faq-bg);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    margin-top: -23px;
+    display: none;
+    margin-bottom: 5px;
+}
+
+/*------------------
+    Responsividade
+--------------------*/
+@media only screen and (min-width: 1024px) and (max-width: 1366px){
+    ul.menu-header {
+        padding-left: 322px;
+    }
+
+    .row-2 {
+        display: flex;
+        margin-right: 11px;
+        margin-left: 246px; 
+    }
+
+    .row-5 {
+        display: flex;
+        margin: 0 0 75px 0;
+    }
+
+    .row-5-dot-1 {
+        display: flex;
+        margin: 0;
+    }
+
+    .dual-phones>img {
+        position: absolute;
+        top: 5365px;
+        height: 776px;
+        left: 750px;
+    }
+}
+
+::selection {
+    color: var(--color-1);
+    background-color: var(--color-0);
+}
